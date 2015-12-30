@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "AccountSummary";
+}
+
+<html ng-app="BankingApplication368">
+    <head>
+        <title>
+            AccountSummary
+        </title>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/BankingApplication368/App.js"></script>
+        <script src="~/Scripts/BankingApplication368/Controller.js"></script>
+        <style>
+            table,th, td {
+                border: 1px solid black;
+                border-collapse:collapse;
+                padding:10px;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #4CAF50;
+                color:white;
+            }
+        </style>
+    </head>
+    <body ng-controller="AccountSummaryController" >
+        <form ng-submit="Ministatement()">
+       <div align="right"><h1>{{user_data.successmessage}}</h1></div>
+            <div align="right"></div>
+            <div align="right"><input type="button" value="Logout" ng-click="Logout()"</div>
+         <table align="center">
+            <tr>  
+                <th>AccountNumber</th>
+            </tr>
+             <tr>
+                 <td align="center">{{user_data.AccountNumber}}</td>
+             </tr>
+            <tr>
+                <th>EmailId</th>
+                
+            </tr>
+             <tr>
+                 <td align="center">{{user_data.EmailId}}</td>
+             </tr>
+            <tr>
+                <th>MobileNumber</th>
+            </tr>
+             <tr>
+                 <td align="center">{{user_data.MobileNumber}}</td>
+             </tr>
+            <tr>
+                <th>Balance</th>
+                
+            </tr>
+             <tr>
+                 <td align="center">{{user_data.Balance}}</td>
+             </tr>
+
+        </table>
+            <div align="center"><a href="~/Views/Home/MiniStatement"> MiniStatement</a></div>
+            </form>
+        <div>{{user_data.errormessage}}</div>
+
+    </body>
+</html>
+
