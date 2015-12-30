@@ -1,0 +1,41 @@
+﻿<html ng-app="BankingApplication368">
+    <head>
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/BankingApplication368/App.js"></script>
+        <script src="~/Scripts/BankingApplication368/Controller.js"></script> 
+     </head>
+<body ng-controller="LoginController" background="~/Images/banking2.jpg"/>
+  <div align="center">  <h2>LogIn</h2></div>
+       <form novalidate name="loginform" ng-submit="Login()">
+            
+           
+            <table  align="center">
+                <tr>
+                    <td>Email 
+                    </td>
+                    <td>
+                        <input type="email" name="EmailId" placeholder="username@domainname" ng-model="LoginData.EmailId" required autofocus />
+                        <span class="error" ng-show="loginform.EmailId.$touched && loginform.EmailId.$error.required">User Name is Required...</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="Password" ng-model="LoginData.Password" required autofocus />
+                        <span class="error" ng-show="loginform.Password.$dirty && loginform.Password.$error.required">Password is Required...</span>
+                    </td>
+                   
+                </tr>
+
+                <tr>
+                    
+                       <td></td> <div><td><input type="submit" value="Login" class = "btn btn-primary" ng-disabled="loginform.$invalid" /></td></div>
+
+                    
+                    </tr>
+            </table>
+            <div class="error">
+                {{errormessage}}
+            </div>
+            </body>
+            </html>
