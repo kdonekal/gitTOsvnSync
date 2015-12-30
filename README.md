@@ -1,0 +1,2 @@
+# gitTOsvnSync
+GIT<->SVN SYNC
